@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Art of Michaela Chang">
+    <meta name="keywords" content="art">
+    <!-- Change -->
+    <meta name="author" content="Michaela Chang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Inkonsistent | Art of Michaela Chang</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.grid').isotope({
+                itemSelector: '.grid-item',
+            });
+
+            // filter items on button click
+            $('.filter-options').on('click', 'a', function() {
+                var filterValue = $(this).attr('data-filter');
+                $('.grid').isotope({
+                    filter: filterValue
+                });
+                $('.filter-options a').removeClass('active');
+                $(this).addClass('active');
+            });
+        })
+
+    </script>
+
+
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+    <script>
+        $(function() {
+            $("#nav-placeholder").load("nav.html");
+        });
+
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="filter-options">
+        <a href="#" data-filter="*" class="active">All</a>
+        <a href="#" data-filter=".design">Design</a>
+        <a href="#" data-filter=".illustration">Illustration</a>
+        <a href="#" data-filter=".concept">Concept</a>
+        <a href="#" data-filter=".projects">Projects</a>
+    </div>
+
+    <div class="content grid" id="photos">
+        <div class="design grid-item">
+            <img class="p2" src="img/portfolio-des1.jpg">
+        </div>
+
+        <div class="illustration grid-item">
+            <img class="p2" src="img/portfolio-ill1.jpg">
+        </div>
+
+        <div class="illustration grid-item">
+            <img class="p2" src="img/portfolio-ill2.jpg">
+        </div>
+
+        <div class="illustration grid-item">
+            <img class="p2" src="img/portfolio-ill3.jpg">
+        </div>
+
+        <div class="illustration grid-item">
+            <img class="p2" src="img/portfolio-ill4.jpg">
+        </div>
+
+        <div class="illustration grid-item">
+            <img class="p2" src="img/portfolio-ill5.jpg">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
