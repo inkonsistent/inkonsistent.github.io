@@ -8,10 +8,15 @@
     <!-- Change -->
     <meta name="author" content="Michaela Chang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <title>Inkonsistent | Art of Michaela Chang</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -35,6 +40,51 @@
 
     </script>
 
+    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // Trigger Lightbox
+            $('.p2').click(function(e) {
+                e.preventDefault();
+                var image_href = $(this).attr("href");
+                if ($('.overlay').length > 0) { // #lightbox exists
+
+                    //insert img tag with clicked link's href as src value
+                    $('.image').html('<img src="' + image_href + '" />');
+
+                    //show lightbox window - you can use a transition here if you want, i.e. .show('fast')
+                    $('.overlay').show();
+                } else { //#lightbox does not exist 
+
+                    //create HTML markup for lightbox window
+                    var lightbox =
+                        '<div id="overlay">' +
+                        '<div class="lightbox">' +
+                        '<div class="image">' + //insert clicked link's href into img src
+                        '<img src="' + image_href + '" />' +
+                        '</div>' +
+                        '<div class="col">' +
+                        '<a href="#" class="close">x</a>' +
+                        '<div class="caption">' +
+                        '<h3>Title</h3>' +
+                        '<hr>' +
+                        '<p>Caption</p>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+
+                    //insert lightbox HTML into page
+                    $('body').append(lightbox);
+                }
+            });
+
+            $('.overlay').live('click', function() {
+                $('.overlay').hide();
+            });
+        });
+
+    </script>
 
 </head>
 
@@ -60,31 +110,30 @@
 
     <div class="content grid" id="photos">
         <div class="design grid-item">
-            <img class="p2" src="img/portfolio-des1.jpg">
+            <a href="img/portfolio-des1.jpg"><img class="p2" src="img/portfolio-des1.jpg" alt=""></a>
         </div>
 
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill1.jpg">
+            <a href="img/portfolio-ill1.jpg"><img class="p2" src="img/portfolio-ill1.jpg"></a>
         </div>
 
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill2.jpg">
+            <a href="img/portfolio-ill2.jpg"><img class="p2" src="img/portfolio-ill2.jpg"></a>
         </div>
 
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill3.jpg">
+            <a href="img/portfolio-ill3.jpg"><img class="p2" src="img/portfolio-ill3.jpg"></a>
         </div>
 
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill4.jpg">
+            <a href="img/portfolio-ill4.jpg"><img class="p2" src="img/portfolio-ill4.jpg"></a>
         </div>
 
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill5.jpg">
+            <a href="img/portfolio-ill5.jpg"><img class="p2" src="img/portfolio-ill5.jpg"></a>
         </div>
 
     </div>
-
 </body>
 
 </html>
