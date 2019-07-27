@@ -286,4 +286,10 @@ body {
 #photos img {
     max-width: 100%;
     max-height: 100%;
+    transition: .2s linear;
+}
+#photos img:hover {
+    opacity: .8;
+    cursor: pointer;
+    transition: .1s linear;
 }
