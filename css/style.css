@@ -271,25 +271,17 @@ body {
     color: #f9f9f9;
 }
 #photos {
-    margin: 14% auto 0;
-    width: 98%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    margin: 14% 10px;
+    width: 100%;
+    display: block;
 }
-#photos div {
-    display: flex;
-    margin: auto;
-    margin: 5px;
-    max-width: 32.8%;
+.grid-item {
+    display: inline;
+    width: 33%;
+    position: absolute;
+    padding: 5px;
+    box-sizing: border-box;
 }
 #photos img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: .2s linear;
-}
-#photos img:hover {
-    opacity: .8;
-    cursor: pointer;
-    transition: .1s linear;
+    width: 100%;
 }
