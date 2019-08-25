@@ -259,10 +259,9 @@ body {
 /* Image Hover Effects */
 
 .grid-item a {
-    background: black;
     opacity: 1;
-    -webkit-transition: .3s linear;
-    transition: .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
 }
 .grid-item a:hover {
     opacity: .8;
@@ -300,7 +299,7 @@ body {
     display: block;
 }
 .grid-item {
-    display: inline;
+    display: inline-block;
     width: 33%;
     position: absolute;
     padding: 5px;

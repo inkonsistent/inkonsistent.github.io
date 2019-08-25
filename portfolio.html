@@ -18,6 +18,22 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            /* // URL HASH
+            $('.grid-item a').click(function() {
+                setTimeout(function() {
+                    var hash = location.hash.replace('#', '');
+                    if (hash != '') {
+                        // Show the hash if it's set
+
+                        // Clear the hash in the URL
+                        location.hash = '';
+                        alert(hash);
+
+                    }
+                }, 500);
+            }); 
+            */
+
 
             // FILTER GRID
             $('.grid').isotope({
@@ -33,6 +49,7 @@
                 $('.filter-options a').removeClass('active');
                 $(this).addClass('active');
             });
+
         });
 
     </script>
@@ -54,28 +71,28 @@
     <!--End Navbar-->
 
     <div class="filter-options">
-        <a href="#" data-filter="*" class="active">All</a>
-        <a href="#" data-filter=".design">Design</a>
-        <a href="#" data-filter=".illustration">Illustration</a>
-        <a href="#" data-filter=".concept">Concept</a>
-        <a href="#" data-filter=".projects">Projects</a>
+        <a href="javascript:void(0)" data-filter="*" class="active">All</a>
+        <a href="javascript:void(0)" data-filter=".design">Design</a>
+        <a href="javascript:void(0)" data-filter=".illustration">Illustration</a>
+        <a href="javascript:void(0)" data-filter=".concept">Concept</a>
+        <a href="javascript:void(0)" data-filter=".projects">Projects</a>
     </div>
 
     <!-- Grid -->
     <div class="grid">
         <div class="design grid-item">
-            <a href="#photo01">
+            <a href="#01">
                 <img src="img/portfolio-des1.jpg" alt="Backpack Design">
             </a>
 
             <!-- Lightbox -->
-            <div class="lightbox-target" id="photo01">
+            <div class="lightbox-target" id="01">
                 <div class="container">
                     <div class="image">
                         <img src="img/portfolio-des1.jpg">
                     </div>
                     <div class="col">
-                        <a href="#close" class="close">×</a>
+                        <a href="#close" class="close">&times;</a>
                         <div class="caption">
                             <h3>Model FXC Design</h3>
                             <hr>
@@ -91,12 +108,12 @@
 
 
         <div class="illustration grid-item">
-            <a href="#photo02">
+            <a href="#02">
                 <img src="img/portfolio-ill1.jpg" alt="Elliot">
             </a>
 
             <!-- Lightbox -->
-            <div class="lightbox-target" id="photo02">
+            <div class="lightbox-target" id="02">
                 <div class="container">
                     <div class="image">
                         <img src="img/portfolio-ill1.jpg">
@@ -116,12 +133,12 @@
 
 
         <div class="illustration grid-item">
-            <a href="#photo03">
+            <a href="#03">
                 <img src="img/portfolio-ill2.jpg" alt="Here On Out">
             </a>
 
             <!-- Lightbox -->
-            <div class="lightbox-target" id="photo03">
+            <div class="lightbox-target" id="03">
                 <div class="container">
                     <div class="image">
                         <img src="img/portfolio-ill2.jpg">
@@ -141,12 +158,12 @@
 
 
         <div class="illustration grid-item">
-            <a href="#photo04">
+            <a href="#04">
                 <img src="img/portfolio-ill3.jpg" alt="Donation Piece">
             </a>
 
             <!-- Lightbox -->
-            <div class="lightbox-target" id="photo04">
+            <div class="lightbox-target" id="04">
                 <div class="container">
                     <div class="image">
                         <img src="img/portfolio-ill3.jpg">
@@ -166,12 +183,12 @@
 
 
         <div class="illustration grid-item">
-            <a href="#photo05">
+            <a href="#05">
                 <img src="img/portfolio-ill4.jpg" alt="Hidden Path">
             </a>
 
             <!-- Lightbox -->
-            <div class="lightbox-target" id="photo05">
+            <div class="lightbox-target" id="05">
                 <div class="container">
                     <div class="image">
                         <img src="img/portfolio-ill4.jpg">
@@ -191,12 +208,12 @@
 
 
         <div class="illustration grid-item">
-            <a href="#photo06">
+            <a href="#06">
                 <img src="img/portfolio-ill5.jpg" alt="Skiing">
             </a>
 
             <!-- Lightbox -->
-            <div class="lightbox-target" id="photo06">
+            <div class="lightbox-target" id="06">
                 <div class="container">
                     <div class="image">
                         <img src="img/portfolio-ill5.jpg">
