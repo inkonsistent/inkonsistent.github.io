@@ -11,9 +11,8 @@
 
     <title>Inkonsistent | Art of Michaela Chang</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
-
-
+    
+    <!-- Filter Code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
@@ -32,11 +31,21 @@
                 $('.filter-options a').removeClass('active');
                 $(this).addClass('active');
             });
+        });
 
+    </script>
+    <!-- end Filter Code -->
+
+    <!-- Lightbox Code
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+    <script type="text/javascript">
             // Trigger Lightbox
             $('.p2').click(function(e) {
                 e.preventDefault();
+
                 var image_href = $(this).attr("src");
+                var title = $(this).attr("alt");
+
                 if ($('.overlay').length > 0) { // #lightbox exists
 
                     //insert img tag with clicked link's href as src value
@@ -56,7 +65,7 @@
                         '<div class="col">' +
                         '<a href="#" class="close">x</a>' +
                         '<div class="caption">' +
-                        '<h3>Title</h3>' +
+                        '<h3>' + title + '</h3>' +
                         '<hr>' +
                         '<p>Caption</p>' +
                         '</div>' +
@@ -76,11 +85,12 @@
         });
 
     </script>
+    -->
 
 </head>
 
 <body>
-    <!--Navigation bar-->
+    <!--Navbar-->
     <div id="nav-placeholder">
     </div>
     <script>
@@ -89,7 +99,7 @@
         });
 
     </script>
-    <!--end of Navigation bar-->
+    <!--End Navbar-->
 
     <div class="filter-options">
         <a href="#" data-filter="*" class="active">All</a>
@@ -98,33 +108,35 @@
         <a href="#" data-filter=".concept">Concept</a>
         <a href="#" data-filter=".projects">Projects</a>
     </div>
-
-    <div class="content grid" id="photos">
+    
+    <!-- Grid -->
+    <div class="grid" >
         <div class="design grid-item">
-            <a href="img/portfolio-des1.jpg"><img class="p2" src="img/portfolio-des1.jpg" alt=""></a>
+            <img class="p2" src="img/portfolio-des1.jpg" alt="Backpack Design">
         </div>
 
         <div class="illustration grid-item">
-            <a href="img/portfolio-ill1.jpg"><img class="p2" src="img/portfolio-ill1.jpg"></a>
+            <img class="p2" src="img/portfolio-ill1.jpg" alt="Elliot">
         </div>
 
         <div class="illustration grid-item">
-            <a href="img/portfolio-ill2.jpg"><img class="p2" src="img/portfolio-ill2.jpg"></a>
+            <img class="p2" src="img/portfolio-ill2.jpg" alt="Here On Out">
         </div>
 
         <div class="illustration grid-item">
-            <a href="img/portfolio-ill3.jpg"><img class="p2" src="img/portfolio-ill3.jpg"></a>
+            <img class="p2" src="img/portfolio-ill3.jpg" alt="Donation Piece">
         </div>
 
         <div class="illustration grid-item">
-            <a href="img/portfolio-ill4.jpg"><img class="p2" src="img/portfolio-ill4.jpg"></a>
+            <img class="p2" src="img/portfolio-ill4.jpg" alt="Hidden Path">
         </div>
 
         <div class="illustration grid-item">
-            <a href="img/portfolio-ill5.jpg"><img class="p2" src="img/portfolio-ill5.jpg"></a>
+            <img class="p2" src="img/portfolio-ill5.jpg" alt="Skiing">
         </div>
-
     </div>
+    <!-- Grid -->
+    
 </body>
 
 </html>

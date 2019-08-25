@@ -270,7 +270,7 @@ body {
     background: #1E2631;
     color: #f9f9f9;
 }
-#photos {
+.grid {
     margin: 14% 10px;
     width: 100%;
     display: block;
@@ -282,6 +282,6 @@ body {
     padding: 5px;
     box-sizing: border-box;
 }
-#photos img {
+.grid img {
     width: 100%;
 }
