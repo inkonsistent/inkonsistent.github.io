@@ -63,7 +63,7 @@ body {
     margin-top: 70px;
 }
 
-/* hover */
+/* Hover Animations */
 
 .nav-content a,
 .nav-content a:after,
@@ -92,6 +92,9 @@ body {
 .nav-content a:hover:after {
     width: 85%;
 }
+
+/* Hover End */
+
 
 /* Navbar End */
 
@@ -247,6 +250,12 @@ body {
     transform: scale(1.1);
 }
 
+/* Home End */
+
+
+/* Portfolio */
+
+
 /* Portfolio Grid Layout */
 
 .filter-options {
@@ -271,7 +280,7 @@ body {
     color: #f9f9f9;
 }
 .grid {
-    margin: 14% 10px;
+    margin: 14% 10px 20px;
     width: 100%;
     display: block;
 }
@@ -285,3 +294,5 @@ body {
 .grid img {
     width: 100%;
 }
+
+/* End Portfolio Grid Layout */

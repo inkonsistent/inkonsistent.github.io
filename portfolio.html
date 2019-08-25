@@ -11,7 +11,8 @@
 
     <title>Inkonsistent | Art of Michaela Chang</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+
     <!-- Filter Code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -36,56 +37,6 @@
     </script>
     <!-- end Filter Code -->
 
-    <!-- Lightbox Code
-    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
-    <script type="text/javascript">
-            // Trigger Lightbox
-            $('.p2').click(function(e) {
-                e.preventDefault();
-
-                var image_href = $(this).attr("src");
-                var title = $(this).attr("alt");
-
-                if ($('.overlay').length > 0) { // #lightbox exists
-
-                    //insert img tag with clicked link's href as src value
-                    $('.image').html('<img src="' + image_href + '" />');
-
-                    //show lightbox window - you can use a transition here if you want, i.e. .show('fast')
-                    $('.overlay').show();
-                } else { //#lightbox does not exist 
-
-                    //create HTML markup for lightbox window
-                    var lightbox =
-                        '<div class="overlay">' +
-                        '<div class="lightbox">' +
-                        '<div class="image">' + //insert clicked link's href into img src
-                        '<img src="' + image_href + '" />' +
-                        '</div>' +
-                        '<div class="col">' +
-                        '<a href="#" class="close">x</a>' +
-                        '<div class="caption">' +
-                        '<h3>' + title + '</h3>' +
-                        '<hr>' +
-                        '<p>Caption</p>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>';
-
-                    //insert lightbox HTML into page
-                    $('body').append(lightbox);
-                }
-            });
-
-            // close lightbox
-            $('body').on('click', '.overlay', function() {
-                $('.overlay').hide();
-            });
-        });
-
-    </script>
-    -->
 
 </head>
 
@@ -108,35 +59,160 @@
         <a href="#" data-filter=".concept">Concept</a>
         <a href="#" data-filter=".projects">Projects</a>
     </div>
-    
+
     <!-- Grid -->
-    <div class="grid" >
+    <div class="grid">
         <div class="design grid-item">
-            <img class="p2" src="img/portfolio-des1.jpg" alt="Backpack Design">
+            <a href="#photo01">
+                <img src="img/portfolio-des1.jpg" alt="Backpack Design">
+            </a>
+
+            <!-- Lightbox -->
+            <div class="lightbox-target" id="photo01">
+                <div class="container">
+                    <div class="image">
+                        <img src="img/portfolio-des1.jpg">
+                    </div>
+                    <div class="col">
+                        <a href="#close" class="close">×</a>
+                        <div class="caption">
+                            <h3>Model FXC Design</h3>
+                            <hr>
+                            <p>caption comes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Lightbox -->
         </div>
 
-        <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill1.jpg" alt="Elliot">
-        </div>
 
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill2.jpg" alt="Here On Out">
+            <a href="#photo02">
+                <img src="img/portfolio-ill1.jpg" alt="Elliot">
+            </a>
+
+            <!-- Lightbox -->
+            <div class="lightbox-target" id="photo02">
+                <div class="container">
+                    <div class="image">
+                        <img src="img/portfolio-ill1.jpg">
+                    </div>
+                    <div class="col">
+                        <a href="#close" class="close">×</a>
+                        <div class="caption">
+                            <h3>Elliot</h3>
+                            <hr>
+                            <p>caption comes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Lightbox -->
         </div>
 
-        <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill3.jpg" alt="Donation Piece">
-        </div>
 
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill4.jpg" alt="Hidden Path">
+            <a href="#photo03">
+                <img src="img/portfolio-ill2.jpg" alt="Here On Out">
+            </a>
+
+            <!-- Lightbox -->
+            <div class="lightbox-target" id="photo03">
+                <div class="container">
+                    <div class="image">
+                        <img src="img/portfolio-ill2.jpg">
+                    </div>
+                    <div class="col">
+                        <a href="#close" class="close">×</a>
+                        <div class="caption">
+                            <h3>Here On Out</h3>
+                            <hr>
+                            <p>caption comes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
+
         <div class="illustration grid-item">
-            <img class="p2" src="img/portfolio-ill5.jpg" alt="Skiing">
+            <a href="#photo04">
+                <img src="img/portfolio-ill3.jpg" alt="Donation Piece">
+            </a>
+
+            <!-- Lightbox -->
+            <div class="lightbox-target" id="photo04">
+                <div class="container">
+                    <div class="image">
+                        <img src="img/portfolio-ill3.jpg">
+                    </div>
+                    <div class="col">
+                        <a href="#close" class="close">×</a>
+                        <div class="caption">
+                            <h3>Donation Piece</h3>
+                            <hr>
+                            <p>caption comes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Lightbox -->
+        </div>
+
+
+        <div class="illustration grid-item">
+            <a href="#photo05">
+                <img src="img/portfolio-ill4.jpg" alt="Hidden Path">
+            </a>
+
+            <!-- Lightbox -->
+            <div class="lightbox-target" id="photo05">
+                <div class="container">
+                    <div class="image">
+                        <img src="img/portfolio-ill4.jpg">
+                    </div>
+                    <div class="col">
+                        <a href="#close" class="close">×</a>
+                        <div class="caption">
+                            <h3>Hidden Path</h3>
+                            <hr>
+                            <p>caption comes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Lightbox -->
+        </div>
+
+
+        <div class="illustration grid-item">
+            <a href="#photo06">
+                <img src="img/portfolio-ill5.jpg" alt="Skiing">
+            </a>
+            
+            <!-- Lightbox -->
+            <div class="lightbox-target" id="photo06">
+                <div class="container">
+                    <div class="image">
+                        <img src="img/portfolio-ill5.jpg">
+                    </div>
+                    <div class="col">
+                        <a href="#close" class="close">×</a>
+                        <div class="caption">
+                            <h3>Skiing</h3>
+                            <hr>
+                            <p>caption comes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Lightbox -->
         </div>
     </div>
     <!-- Grid -->
-    
+
 </body>
 
 </html>
