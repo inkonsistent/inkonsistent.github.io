@@ -256,6 +256,21 @@ body {
 /* Portfolio */
 
 
+/* Image Hover Effects */
+
+.grid-item a {
+    background: black;
+    opacity: 1;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+.grid-item a:hover {
+    opacity: .8;
+}
+
+/* End Image Hover Effects */
+
+
 /* Portfolio Grid Layout */
 
 .filter-options {

@@ -5,77 +5,6 @@
     src: url("fonts/Metropolis-Regular.eot");
     src: url("fonts/Metropolis-Regular.woff") format("woff");
 }
-
-/*
-.overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    z-index: 300;
-}
-.lightbox {
-    z-index: 1000;
-    background: #171B20;
-    margin: 50px auto;
-    width: 80%;
-    flex-direction: row;
-    display: flex;
-    height: 80%;
-}
-.image {
-    padding: 20px;
-    text-align: center;
-    display: inline-block;
-    max-height: 100%;
-    max-width: 75%;
-    flex: 1;
-}
-.image img {
-    max-height: 100%;
-    max-width: auto;
-}
-.col {
-    background: #333B46;
-    color: white;
-    font-family: 'Metropolis', Arial, sans-serif;
-    display: inline-block;
-    float: right;
-    padding: 20px;
-    width: 20%;
-    text-align: center;
-}
-.caption {
-    margin: 10px;
-}
-.caption h3 {
-    font-size: 40px;
-    margin-top: 30px;
-    height: 20%;
-}
-.caption p {
-    font-size: 20px;
-    color: #C9C9C9;
-}
-.caption hr {
-    width: 60%;
-    border: 2px solid #F27100;
-}
-.close {
-    @include transition(0.3s);
-    @include size(30px);
-    color: white;
-    cursor: pointer;
-    font-size: 26px;
-    float: right;
-    text-decoration: none;
-}
-*/
-
 .lightbox-target {
     position: fixed;
     top: -100%;
@@ -122,36 +51,41 @@
     background: #333B46;
     color: white;
     font-family: 'Metropolis', Arial, sans-serif;
-    display: inline-block;
+    display: flex;
     float: right;
     padding: 20px;
     width: 20%;
     text-align: center;
+    height: auto;
+    flex-flow: column;
 }
 .caption {
-    margin: 10px;
+    position: absolute margin: 20px;
+    flex: 1 0 auto;
 }
 .caption h3 {
     font-size: 40px;
-    margin-top: 30px;
-    height: 20%;
+    margin: 10px 0 30px;
 }
 .caption p {
-    font-size: 20px;
+    font-size: 16px;
     color: #C9C9C9;
+    padding-top: 10px;
 }
 .caption hr {
     width: 60%;
     border: 2px solid #F27100;
 }
 .close {
-    @include transition(0.3s);
-    @include size(30px);
     color: white;
     cursor: pointer;
     font-size: 26px;
-    float: right;
     text-decoration: none;
+    text-align: right;
+    max-width: inherit;
+    width: 100%;
+    float: right;
+    height: auto;
 }
 .lightbox-target:target {
     opacity: 1;
